@@ -9,77 +9,109 @@
 <body>
 
 <div class="phone">
+
+  <!-- Notch -->
+  <div class="notch-bar">
+    <div class="notch"></div>
+  </div>
+
   <!-- Status Bar -->
   <div class="status-bar">
     <span class="status-time">11:22</span>
     <div class="status-right">
-      <svg class="icon-bell" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 22a2.5 2.5 0 0 0 2.45-2H9.55A2.5 2.5 0 0 0 12 22zM19 15.5V11a7 7 0 0 0-5.5-6.84V3a1.5 1.5 0 0 0-3 0v1.16A7 7 0 0 0 5 11v4.5L3 18v1h18v-1z" opacity="0.3"/></svg>
-      <svg width="18" height="12" viewBox="0 0 18 12" class="signal"><rect x="0" y="7" width="3" height="5"/><rect x="4" y="5" width="3" height="7"/><rect x="8" y="3" width="3" height="9" opacity="0.35"/><rect x="12" y="1" width="3" height="11" opacity="0.35"/></svg>
-      <svg width="15" height="12" viewBox="0 0 15 12" class="wifi"><path d="M7.5 10.5a1.3 1.3 0 1 1 0-2.6 1.3 1.3 0 0 1 0 2.6zM4.6 6.9a4 4 0 0 1 5.8 0l-1 1a2.6 2.6 0 0 0-3.8 0zM2.2 4.5a7.4 7.4 0 0 1 10.6 0l-1 1a5.9 5.9 0 0 0-8.5 0z"/></svg>
-      <div class="battery">
-        <span class="battery-pct">90</span>
-        <div class="battery-body"><div class="battery-fill" style="width:82%"></div></div>
-        <div class="battery-tip"></div>
+      <div class="signal-bars">
+        <span class="bar b1"></span>
+        <span class="bar b2"></span>
+        <span class="bar b3"></span>
+        <span class="bar b4"></span>
+      </div>
+      <div class="wifi-icon">
+        <span class="w1"></span>
+        <span class="w2"></span>
+        <span class="w3"></span>
+        <span class="wdot"></span>
+      </div>
+      <div class="battery-wrap">
+        <span class="battery-pct">90%</span>
+        <div class="battery-shell">
+          <div class="battery-level" style="width:82%"></div>
+        </div>
+        <div class="battery-nub"></div>
       </div>
     </div>
   </div>
 
-  <!-- App Banner (Open in Amazon App) -->
+  <!-- App Banner -->
   <div class="app-banner" id="appBanner">
-    <button class="banner-close" id="bannerClose">✕</button>
+    <button class="banner-close" id="bannerClose">
+      <span class="x-line x1"></span>
+      <span class="x-line x2"></span>
+    </button>
     <div class="banner-icon"></div>
     <div class="banner-text">
       <div class="banner-title">Amazon - Shopping made easy</div>
-      <div class="banner-sub">Open in the Amazon app</div>
+      <div class="banner-sub">Open in the Amazon App — Free on the App Store</div>
     </div>
     <button class="banner-open" id="bannerOpen">OPEN</button>
   </div>
 
-  <!-- Browser viewport -->
+  <!-- Browser Viewport -->
   <div class="browser-viewport" id="browserViewport">
 
-    <!-- PAGE: search results -->
+    <!-- PAGE: Search Results -->
     <div class="page" id="page-search">
+
       <div class="amazon-header">
-        <button class="hamburger">
+        <button class="hamburger" id="hamburgerBtn">
           <span></span><span></span><span></span>
         </button>
-        <div class="amazon-logo">amazon<span class="smile">⌣</span></div>
+        <div class="amazon-logo">amazon<span class="smile-arc"></span></div>
         <div class="header-right">
-          <span class="signin">Sign in <span class="chevron">›</span></span>
-          <div class="cart-icon">
+          <span class="signin">Hello, sign in <span class="chevron-down"></span></span>
+          <div class="cart-wrap">
+            <div class="cart-icon-css"></div>
             <span class="cart-badge">0</span>
-            🛒
           </div>
         </div>
       </div>
 
       <div class="search-bar-row">
-        <div class="search-input">golf balls</div>
-        <div class="search-btn">🔍</div>
+        <div class="search-input-wrap" id="searchInputWrap">
+          <div class="search-mag"></div>
+          <span class="search-text" id="searchText">golf balls</span>
+        </div>
+        <button class="search-btn" id="searchBtn">
+          <div class="search-btn-mag"></div>
+        </button>
       </div>
 
       <div class="deliver-row">
-        <span class="pin">📍</span> Deliver to Philippines <span class="chevron">⌄</span>
+        <div class="pin-icon-css"></div>
+        <span>Deliver to Philippines</span>
+        <div class="chevron-down small"></div>
       </div>
 
       <div class="ship-banner">
         We're showing you items that ship to <b>Philippines</b>. To see items that ship to a different country, change your delivery address.
         <div class="ship-banner-btns">
-          <button class="pill-btn light">Dismiss</button>
+          <button class="pill-btn light" id="dismissBanner">Dismiss</button>
           <button class="pill-btn yellow">Change Address</button>
         </div>
       </div>
 
       <div class="filter-row">
-        <button class="filter-pill icon-pill">⚙︎</button>
+        <button class="filter-pill icon-pill">
+          <div class="filter-lines">
+            <span></span><span></span><span></span>
+          </div>
+        </button>
         <button class="filter-pill blue-text">Prime Day<br>Deals</button>
         <button class="filter-pill">Most Purchased</button>
-        <button class="filter-pill">★★★★ &amp;</button>
+        <button class="filter-pill">&#9733;&#9733;&#9733;&#9733; &amp;</button>
       </div>
       <div class="filter-row second">
-        <button class="filter-pill">Discover ⌄</button>
-        <button class="filter-pill">Brands ⌄</button>
+        <button class="filter-pill">Discover <span class="chevron-down small inline"></span></button>
+        <button class="filter-pill">Brands <span class="chevron-down small inline"></span></button>
         <button class="filter-pill">Condit...</button>
       </div>
 
@@ -90,16 +122,28 @@
       <div class="product-card" id="productCardOpen">
         <div class="product-img-wrap">
           <div class="sponsored-tag">Sponsored</div>
-          <div class="product-img taylormade"></div>
-          <button class="add-photo-btn">📷+</button>
+          <div class="product-img taylormade">
+            <div class="tm-ball"></div>
+            <div class="tm-label">TaylorMade</div>
+            <div class="tm-sub">TP5</div>
+          </div>
+          <button class="add-photo-btn">
+            <div class="cam-icon-css"></div>
+          </button>
         </div>
         <div class="product-info">
           <div class="sponsored-label">Sponsored</div>
-          <div class="product-title">TaylorMade Golf TP5</div>
+          <div class="product-title">TaylorMade Golf TP5 Golf Balls</div>
           <div class="product-tag">Golf</div>
-          <div class="product-rating">4.6 ★★★★★ (29)</div>
+          <div class="product-rating">
+            <div class="stars-css s46"></div>
+            <span>4.6 (29)</span>
+          </div>
           <div class="bought">200+ bought in past month</div>
-          <div class="price"><span class="price-big">$49<sup>99</sup></span> <span class="price-old">List: $57.99</span></div>
+          <div class="price">
+            <span class="price-big">$49<sup>99</sup></span>
+            <span class="price-old">List: $57.99</span>
+          </div>
           <div class="delivery">FREE delivery <b>Tue, Jul 14</b> to Philippines</div>
           <button class="see-options-btn" id="seeOptionsBtn">See options</button>
         </div>
@@ -109,26 +153,45 @@
         <div class="sponsored-label">Sponsored</div>
         <div class="title-blur">Callaway, Taylormade | Pinnacl...</div>
       </div>
+
     </div>
 
-    <!-- PAGE: product detail (Callaway) -->
+    <!-- PAGE: Product Detail -->
     <div class="page hidden" id="page-product">
+
       <div class="search-bar-row product-top">
-        <div class="search-input">golf balls</div>
-        <div class="search-btn">🔍</div>
+        <div class="search-input-wrap">
+          <div class="search-mag"></div>
+          <span class="search-text">golf balls</span>
+        </div>
+        <button class="search-btn">
+          <div class="search-btn-mag"></div>
+        </button>
       </div>
+
       <div class="deliver-row">
-        <span class="pin">📍</span> Delivering to Los Angeles 90060 - Update location <span class="chevron">⌄</span>
+        <div class="pin-icon-css"></div>
+        <span>Delivering to Los Angeles 90060 — Update location</span>
+        <div class="chevron-down small"></div>
       </div>
+
       <div class="ad-banner">
         <div class="ad-text">Viral Men's<br>Fashion Finds</div>
-        <div class="ad-imgs">👕 👖 👟 👜</div>
+        <div class="ad-items">
+          <div class="ad-shirt"></div>
+          <div class="ad-pants"></div>
+          <div class="ad-shoe"></div>
+        </div>
       </div>
+
       <div class="brand-row">
-        <div class="brand-logo">Callaway<span class="v">⌄</span></div>
+        <div class="brand-logo-row">
+          <span class="brand-logo">Callaway</span>
+          <div class="chevron-down small inline"></div>
+        </div>
         <div class="brand-link-row">
           <span class="brand-link">Visit the Callaway Store</span>
-          <span class="brand-rating">4.8 ★★★★★ (5,518)</span>
+          <span class="brand-rating">4.8 &#9733;&#9733;&#9733;&#9733;&#9733; (5,518)</span>
         </div>
         <div class="pdp-title">Callaway Golf Supersoft Golf Balls (2025)</div>
         <div class="overall-pick">Overall Pick</div>
@@ -136,134 +199,408 @@
       </div>
 
       <div class="pdp-image-wrap">
-        <div class="pdp-image"></div>
-        <div class="dots"><span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="pdp-image">
+          <div class="callaway-ball-wrap">
+            <div class="callaway-ball">
+              <div class="ball-shine"></div>
+            </div>
+            <div class="callaway-label">Callaway</div>
+            <div class="callaway-sub">SUPERSOFT</div>
+          </div>
+        </div>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
         <div class="pdp-icons">
-          <button class="heart-btn">♡</button>
-          <button class="share-icon-btn" id="shareIconBtn">⬆︎</button>
+          <button class="heart-btn" id="heartBtn">
+            <div class="heart-icon-css"></div>
+          </button>
+          <button class="share-icon-btn" id="shareIconBtn">
+            <div class="share-icon-css"></div>
+          </button>
         </div>
       </div>
+
       <div class="color-row">Color: <b>White</b></div>
+
+      <div class="pdp-price-row">
+        <span class="pdp-price-big">$29<sup>99</sup></span>
+        <span class="pdp-price-old">List: $34.99</span>
+      </div>
+      <div class="pdp-delivery">FREE delivery <b>Thu, Jul 17</b></div>
+
+      <div class="pdp-add-row">
+        <button class="pdp-add-btn">Add to Cart</button>
+        <button class="pdp-buy-btn">Buy Now</button>
+      </div>
+
     </div>
 
   </div>
 
-  <!-- Bottom URL/toolbar -->
-  <div class="url-toolbar">
-    <button class="nav-arrow" id="btnBack">‹</button>
-    <button class="nav-arrow disabled" id="btnFwd">›</button>
-    <div class="url-pill" id="urlPill">
-      <span class="lock">🖥</span>
+  <!-- Safari Bottom Toolbar -->
+  <div class="safari-toolbar" id="safariToolbar">
+    <button class="tb-btn" id="btnBack" title="Back">
+      <div class="arrow-icon left-arrow"></div>
+    </button>
+    <button class="tb-btn disabled" id="btnFwd" title="Forward">
+      <div class="arrow-icon right-arrow"></div>
+    </button>
+    <div class="url-bar" id="urlBar">
+      <div class="lock-icon-css"></div>
       <span class="url-text" id="urlText">amazon.com</span>
-      <span class="refresh">⟳</span>
-      <span class="more-dots" id="tabActionsBtn">•••</span>
+      <button class="reload-btn" id="reloadBtn">
+        <div class="reload-icon-css"></div>
+      </button>
     </div>
+    <button class="tb-btn" id="shareToolbarBtn" title="Share">
+      <div class="share-up-icon"></div>
+    </button>
+    <button class="tb-btn" id="tabsBtn" title="Tabs">
+      <div class="tabs-icon-css">
+        <span class="tabs-count-label" id="tabsCountLabel">6</span>
+      </div>
+    </button>
   </div>
   <div class="home-indicator"></div>
 
-  <!-- Share Sheet Overlay (long-press style menu, image 2) -->
-  <div class="overlay hidden" id="menuOverlay">
-    <div class="dim" id="menuDim"></div>
-    <div class="context-menu">
-      <button class="ctx-item" data-action="share">
-        <span class="ctx-icon">⬆︎</span> Share
-      </button>
-      <button class="ctx-item" data-action="bookmark">
-        <span class="ctx-icon">🔖</span> Add to Bookmarks
-      </button>
-      <button class="ctx-item" data-action="bookmarkto">
-        <span class="ctx-icon">📖</span> Add Bookmark to...
-      </button>
-      <hr>
-      <button class="ctx-item" data-action="newtab">
-        <span class="ctx-icon">＋</span> New Tab
-      </button>
-      <button class="ctx-item" data-action="newprivatetab">
-        <span class="ctx-icon">✋</span> New Private Tab
-      </button>
-      <hr>
-      <div class="ctx-bottom-row">
-        <button class="ctx-bottom-item" data-action="bookmarks">📑<br><span>Bookmarks</span></button>
-        <button class="ctx-bottom-item" data-action="alltabs">🗂<br><span>All Tabs</span></button>
+  <!-- Search Modal -->
+  <div class="overlay hidden" id="searchOverlay">
+    <div class="search-modal">
+      <div class="search-modal-bar">
+        <div class="search-mag sm-dark"></div>
+        <input type="text" class="search-modal-input" id="searchModalInput" placeholder="Search or enter website name" />
+        <button class="search-modal-cancel" id="searchModalCancel">Cancel</button>
+      </div>
+      <div class="search-suggestions" id="searchSuggestions">
+        <div class="suggestion-group-label">Bookmarks & History</div>
+        <div class="suggestion-item" data-url="amazon.com/s?golf+balls">
+          <div class="sug-icon globe"></div>
+          <div class="sug-info">
+            <div class="sug-title">amazon.com — golf balls</div>
+            <div class="sug-url">amazon.com</div>
+          </div>
+        </div>
+        <div class="suggestion-group-label">Google Search</div>
+        <div class="suggestion-item" data-search="golf balls">
+          <div class="sug-icon mag"></div>
+          <div class="sug-info">
+            <div class="sug-title">golf balls</div>
+          </div>
+        </div>
+        <div class="suggestion-item" data-search="golf balls near me">
+          <div class="sug-icon mag"></div>
+          <div class="sug-info">
+            <div class="sug-title">golf balls near me</div>
+          </div>
+        </div>
+        <div class="suggestion-item" data-search="golf balls for beginners">
+          <div class="sug-icon mag"></div>
+          <div class="sug-info">
+            <div class="sug-title">golf balls for beginners</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Full iOS Share Sheet (image 3 & 5) -->
+  <!-- Context Menu Overlay -->
+  <div class="overlay hidden" id="menuOverlay">
+    <div class="dim" id="menuDim"></div>
+    <div class="context-menu" id="contextMenu">
+      <button class="ctx-item" data-action="share">
+        <span class="ctx-label">Share</span>
+        <div class="ctx-icon-css share-up-icon dark"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <button class="ctx-item" data-action="bookmark">
+        <span class="ctx-label">Add to Bookmarks</span>
+        <div class="ctx-icon-css bookmark-icon-css"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <button class="ctx-item" data-action="bookmarkto">
+        <span class="ctx-label">Add Bookmark to…</span>
+        <div class="ctx-icon-css book-icon-css"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <button class="ctx-item" data-action="addreading">
+        <span class="ctx-label">Add to Reading List</span>
+        <div class="ctx-icon-css glasses-icon-css"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <button class="ctx-item" data-action="newtab">
+        <span class="ctx-label">New Tab</span>
+        <div class="ctx-icon-css plus-icon-css"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <button class="ctx-item" data-action="newprivatetab">
+        <span class="ctx-label">New Private Tab</span>
+        <div class="ctx-icon-css private-icon-css"></div>
+      </button>
+      <div class="ctx-sep"></div>
+      <div class="ctx-bottom-row">
+        <button class="ctx-bottom-item" data-action="bookmarks">
+          <div class="ctx-bottom-icon bm-grid-icon"></div>
+          <span>Bookmarks</span>
+        </button>
+        <button class="ctx-bottom-item" data-action="alltabs">
+          <div class="ctx-bottom-icon tabs-grid-icon"></div>
+          <span>All Tabs</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Share Sheet Overlay -->
   <div class="overlay hidden" id="shareSheetOverlay">
     <div class="dim" id="shareSheetDim"></div>
     <div class="share-sheet" id="shareSheet">
 
+      <!-- Step 1: Safari Share Sheet -->
       <div class="share-sheet-step" id="shareStep1">
+        <div class="share-handle"></div>
         <div class="share-header">
           <div class="share-app-icon"></div>
           <div class="share-app-text">
-            <div class="share-title">golf balls</div>
+            <div class="share-title">golf balls — Amazon</div>
             <div class="share-sub">amazon.com</div>
           </div>
         </div>
-        <button class="share-options-btn">Options <span class="chev">›</span></button>
-        <hr>
+        <button class="share-options-btn">Options <span class="chevron-right-css"></span></button>
+        <div class="share-sheet-divider"></div>
         <div class="share-contacts">
-          <div class="contact"><div class="contact-avatar photo"></div><span>Hanze Dee<br>Dalmino</span></div>
-          <div class="contact"><div class="contact-avatar init">A<span class="badge sms">💬</span></div><span>Ate<br>Eziel</span></div>
-          <div class="contact"><div class="contact-avatar init">M<span class="badge sms">💬</span></div><span>Mama</span></div>
-          <div class="contact"><div class="contact-avatar photo2"><span class="badge msgr">Ⓜ</span></div><span>Karen<br>Agbay</span></div>
+          <div class="contact">
+            <div class="contact-avatar photo-a"></div>
+            <span>Hanze Dee<br>Dalmino</span>
+          </div>
+          <div class="contact">
+            <div class="contact-avatar init blue">A
+              <span class="badge-dot sms-badge"></span>
+            </div>
+            <span>Ate<br>Eziel</span>
+          </div>
+          <div class="contact">
+            <div class="contact-avatar init purple">M</div>
+            <span>Mama</span>
+          </div>
+          <div class="contact">
+            <div class="contact-avatar photo-b">
+              <span class="badge-dot msgr-badge"></span>
+            </div>
+            <span>Karen<br>Agbay</span>
+          </div>
         </div>
         <div class="share-apps">
-          <div class="share-app"><div class="app-icon airdrop">📡</div><span>AirDrop</span></div>
-          <div class="share-app" data-action="messages"><div class="app-icon messages">💬</div><span>Messages</span></div>
-          <div class="share-app"><div class="app-icon mail">✉️</div><span>Mail</span></div>
-          <div class="share-app" data-action="messenger"><div class="app-icon messenger">Ⓜ</div><span>Messenger</span></div>
+          <div class="share-app">
+            <div class="app-icon airdrop-icon">
+              <div class="airdrop-waves"></div>
+            </div>
+            <span>AirDrop</span>
+          </div>
+          <div class="share-app" data-action="messages">
+            <div class="app-icon msg-icon">
+              <div class="bubble-css"></div>
+            </div>
+            <span>Messages</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon mail-icon">
+              <div class="envelope-css"></div>
+            </div>
+            <span>Mail</span>
+          </div>
+          <div class="share-app" data-action="messenger">
+            <div class="app-icon msgrapp-icon">
+              <div class="msgr-bolt"></div>
+            </div>
+            <span>Messenger</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon more-icon">
+              <div class="three-dots-h"></div>
+            </div>
+            <span>More</span>
+          </div>
         </div>
-        <div class="share-actions">
-          <div class="share-action"><div class="action-icon">⧉</div><span>Copy</span></div>
-          <div class="share-action" data-action="addbookmark"><div class="action-icon">🔖</div><span>Add to<br>Bookmarks</span></div>
-          <div class="share-action"><div class="action-icon">👓</div><span>Add to<br>Reading List</span></div>
-          <div class="share-action" id="viewMoreBtn"><div class="action-icon">⌄</div><span>View More</span></div>
+        <div class="share-sheet-divider"></div>
+        <div class="share-action-list">
+          <button class="share-action-row" id="copyLinkBtn">
+            <div class="action-row-icon link-icon-css"></div>
+            <span>Copy</span>
+            <div class="action-row-chev"></div>
+          </button>
+          <div class="share-action-sep"></div>
+          <button class="share-action-row" data-action="addbookmark">
+            <div class="action-row-icon bookmark-icon-css dark"></div>
+            <span>Add to Bookmarks</span>
+            <div class="action-row-chev"></div>
+          </button>
+          <div class="share-action-sep"></div>
+          <button class="share-action-row">
+            <div class="action-row-icon glasses-icon-css dark"></div>
+            <span>Add to Reading List</span>
+            <div class="action-row-chev"></div>
+          </button>
+          <div class="share-action-sep"></div>
+          <button class="share-action-row" id="viewMoreBtn">
+            <div class="action-row-icon down-icon-css"></div>
+            <span>More Actions</span>
+            <div class="action-row-chev"></div>
+          </button>
         </div>
+        <button class="share-cancel-btn" id="shareCancel1">Cancel</button>
       </div>
 
-      <!-- Step 2: product share card (image 5) -->
+      <!-- Step 2: Product Share Card -->
       <div class="share-sheet-step hidden" id="shareStep2">
+        <div class="share-handle"></div>
         <div class="share-close-row">
-          <button class="share-close-x" id="shareCloseX">✕</button>
+          <button class="share-close-x" id="shareCloseX">
+            <span class="x-line x1"></span>
+            <span class="x-line x2"></span>
+          </button>
         </div>
         <div class="share-product-title">Share this product with friends</div>
         <div class="share-product-card">
-          <div class="share-product-img"></div>
-          <div class="share-product-rating">4.8★★★★★ (5,518)</div>
+          <div class="share-product-img">
+            <div class="callaway-ball-sm"></div>
+          </div>
+          <div class="share-product-rating">4.8 &#9733;&#9733;&#9733;&#9733;&#9733; (5,518)</div>
           <div class="share-product-name">Callaway Golf Supersoft Golf Balls (2025, White)</div>
         </div>
         <div class="share-apps row2">
-          <div class="share-app"><div class="app-icon imessage">💬</div><span>Messages</span></div>
-          <div class="share-app"><div class="app-icon whatsapp">📞</div><span>WhatsApp</span></div>
-          <div class="share-app"><div class="app-icon copylink">🔗</div><span>Copy</span></div>
-          <div class="share-app"><div class="app-icon messenger">Ⓜ</div><span>Messenger</span></div>
-          <div class="share-app"><div class="app-icon mail">✉️</div><span>Email</span></div>
+          <div class="share-app">
+            <div class="app-icon msg-icon"><div class="bubble-css"></div></div>
+            <span>Messages</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon whatsapp-icon"><div class="wa-phone"></div></div>
+            <span>WhatsApp</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon copylink-icon"><div class="link-icon-css"></div></div>
+            <span>Copy Link</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon msgrapp-icon"><div class="msgr-bolt"></div></div>
+            <span>Messenger</span>
+          </div>
+          <div class="share-app">
+            <div class="app-icon mail-icon"><div class="envelope-css"></div></div>
+            <span>Email</span>
+          </div>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- Tab Switcher Overlay (image 6) -->
+  <!-- Tab Switcher Overlay -->
   <div class="overlay hidden" id="tabsOverlay">
+    <div class="tabs-bg"></div>
+    <div class="tabs-top-bar">
+      <span class="tabs-title">6 Tabs</span>
+    </div>
     <div class="tabs-grid" id="tabsGrid">
-      <div class="tab-thumb"><button class="tab-x">✕</button><div class="thumb-body ad1"></div><div class="thumb-label">🔴 Canon e-Bags Prime</div></div>
-      <div class="tab-thumb"><button class="tab-x">✕</button><div class="thumb-body ad2"></div><div class="thumb-label">🌐 tears of azure sea - Goo...</div></div>
-      <div class="tab-thumb"><button class="tab-x">✕</button><div class="thumb-body search1"></div><div class="thumb-label">🔍 is it father's day today -...</div></div>
-      <div class="tab-thumb active-tab" id="amazonTabThumb"><button class="tab-x">✕</button><div class="thumb-body amazonthumb"></div><div class="thumb-label">📦 Amazon.com : Callaway...</div></div>
-      <div class="tab-thumb"><button class="tab-x">✕</button><div class="thumb-body dior"></div><div class="thumb-label">DIOR Dior Addict Lip Maximiz...</div></div>
-      <div class="tab-thumb"><button class="tab-x">✕</button><div class="thumb-body compass"></div><div class="thumb-label">☀️ Digital ATM Builder Onb...</div></div>
+      <div class="tab-thumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body ad1">
+          <div class="thumb-site-bar"><div class="thumb-favicon red-fav"></div><span>Canon e-Bags Prime</span></div>
+        </div>
+      </div>
+      <div class="tab-thumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body ad2">
+          <div class="thumb-site-bar"><div class="thumb-favicon globe-fav"></div><span>tears of azure sea — Goo...</span></div>
+        </div>
+      </div>
+      <div class="tab-thumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body search1">
+          <div class="thumb-site-bar"><div class="thumb-favicon mag-fav"></div><span>is it father's day today —...</span></div>
+        </div>
+      </div>
+      <div class="tab-thumb active-tab" id="amazonTabThumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body amazonthumb">
+          <div class="thumb-amazon-header"></div>
+          <div class="thumb-amazon-body"></div>
+          <div class="thumb-site-bar active-bar"><div class="thumb-favicon amz-fav"></div><span>Amazon.com : Callaway...</span></div>
+        </div>
+      </div>
+      <div class="tab-thumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body dior">
+          <div class="thumb-site-bar"><div class="thumb-favicon dior-fav"></div><span>DIOR Addict Lip Maximizer...</span></div>
+        </div>
+      </div>
+      <div class="tab-thumb">
+        <button class="tab-x"><span class="x-line x1"></span><span class="x-line x2"></span></button>
+        <div class="thumb-body compass">
+          <div class="thumb-site-bar"><div class="thumb-favicon sun-fav"></div><span>Digital ATM Builder Onb...</span></div>
+        </div>
+      </div>
     </div>
     <div class="tabs-bottom-bar">
-      <button class="tabs-add">＋</button>
-      <button class="tabs-private">Private</button>
-      <button class="tabs-count">48 Tabs</button>
-      <button class="tabs-done" id="tabsDoneBtn">✓</button>
+      <button class="tb-btn tabs-add-btn" id="tabsAddBtn">
+        <div class="plus-icon-css dark"></div>
+      </button>
+      <button class="tabs-private-btn" id="tabsPrivateBtn">Private</button>
+      <button class="tabs-count-btn" id="tabsCountBtn">6 Tabs</button>
+      <button class="tabs-done-btn" id="tabsDoneBtn">Done</button>
     </div>
   </div>
+
+  <!-- New Tab Page -->
+  <div class="overlay hidden" id="newTabOverlay">
+    <div class="new-tab-page">
+      <div class="safari-status-bar">
+        <span class="status-time">11:22</span>
+        <div class="status-right">
+          <div class="signal-bars sm"><span class="bar b1"></span><span class="bar b2"></span><span class="bar b3"></span><span class="bar b4"></span></div>
+          <div class="wifi-icon sm"><span class="w1"></span><span class="w2"></span><span class="w3"></span><span class="wdot"></span></div>
+          <div class="battery-wrap sm"><span class="battery-pct">90%</span><div class="battery-shell"><div class="battery-level" style="width:82%"></div></div><div class="battery-nub"></div></div>
+        </div>
+      </div>
+      <div class="new-tab-content">
+        <div class="nt-greeting">Good morning</div>
+        <div class="nt-favorites">
+          <div class="nt-fav"><div class="nt-fav-icon amz-nt"></div><span>Amazon</span></div>
+          <div class="nt-fav"><div class="nt-fav-icon google-nt"></div><span>Google</span></div>
+          <div class="nt-fav"><div class="nt-fav-icon yt-nt"></div><span>YouTube</span></div>
+          <div class="nt-fav"><div class="nt-fav-icon wiki-nt"></div><span>Wikipedia</span></div>
+        </div>
+      </div>
+      <div class="new-tab-toolbar">
+        <button class="tb-btn" id="ntBackBtn">
+          <div class="arrow-icon left-arrow"></div>
+        </button>
+        <button class="tb-btn disabled">
+          <div class="arrow-icon right-arrow"></div>
+        </button>
+        <div class="url-bar new-tab-url" id="newTabUrlBar">
+          <div class="search-mag sm-dark"></div>
+          <span class="url-text nt-placeholder">Search or enter website name</span>
+        </div>
+        <button class="tb-btn">
+          <div class="share-up-icon"></div>
+        </button>
+        <button class="tb-btn" id="ntTabsBtn">
+          <div class="tabs-icon-css">
+            <span class="tabs-count-label" id="ntTabsLabel">7</span>
+          </div>
+        </button>
+      </div>
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast hidden" id="toast"></div>
 
 </div>
 
